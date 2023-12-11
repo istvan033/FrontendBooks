@@ -1,0 +1,15 @@
+<h2 class="display-1 text-center m-5">Írók</h2>
+
+<div>
+    <div class="row my-3">
+        <div *ngFor="let oszlop of oszlopok" class="col fw-bold mx-3 text-center">
+            {{oszlop['text']}}
+        </div>
+    </div>
+    
+    <div *ngFor="let author of authors" class="row m-2 text-center">
+        <div *ngFor="let oszlop of oszlopok" class="col m-2">
+            {{author[oszlop.key]}}
+        </div>
+    </div>
+</div>
